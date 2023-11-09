@@ -10,6 +10,7 @@ import { ListarRegionesComponent } from './listar-regiones/listar-regiones.compo
 import {MatTableModule} from '@angular/material/table';
 import { EditarRegionComponent } from './editar-region/editar-region.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {FormsModule} from "@angular/forms";
 
 
 
@@ -18,18 +19,19 @@ import {MatDialogModule} from '@angular/material/dialog';
     RegistrarRegionComponent,
     ListarRegionesComponent,
     EditarRegionComponent,
-    
-    
+
+
   ],
-  imports: [
-    CommonModule,
-    RegionesRoutingModule,
-    MatButtonToggleModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatTableModule,
-    MatDialogModule
-  ]
+    imports: [
+        CommonModule,
+        RegionesRoutingModule,
+        MatButtonToggleModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatButtonModule,
+        MatTableModule,
+        MatDialogModule,
+        FormsModule
+    ]
 })
 export class RegionesModule { }

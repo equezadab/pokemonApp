@@ -12,7 +12,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class EditarRegionComponent {
 
   constructor(private regionesServices:RegionesService, public dialogRef: MatDialogRef<EditarRegionComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any){}
+    @Inject(MAT_DIALOG_DATA) public data:any){}
 
   actualizarRegion(id:string,nombreRegion:string){
     const region:IRegiones = {
@@ -23,9 +23,5 @@ export class EditarRegionComponent {
     .subscribe(response=>{
       console.log(response)
     })
-
   }
-
-
-
 }

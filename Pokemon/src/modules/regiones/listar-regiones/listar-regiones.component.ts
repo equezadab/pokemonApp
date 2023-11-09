@@ -13,7 +13,7 @@ export class ListarRegionesComponent implements OnInit {
 
   regiones: IRegiones[] = []; // Define la matriz de regiones
   displayedColumns: string[] = ["id","name","botones","botonPut"]
- 
+
   constructor(private regionesServices: RegionesService, private dialog:MatDialog) {}
 
   obtenerRegiones(){
@@ -25,7 +25,9 @@ export class ListarRegionesComponent implements OnInit {
         })
       })
   }
-
+  ngOnInit() {
+    this.obtenerRegiones();
+  }
   borrarRegiones(region:any){
     this.regionesServices.delete(region[0])
     .subscribe(response=>{
@@ -35,14 +37,6 @@ export class ListarRegionesComponent implements OnInit {
   }
 
   editarRegion(id:string, nombre:string){
-    const region:IRegiones{
-      'id' : Number(id),
-      'region_pokemon': nombre
-    }
-    const dialog = this.dialog.open(EditarRegionComponent, {data: {id:region[0], nombre:region[1]}})
-  }
-
-  ngOnInit() {
-    this.obtenerRegiones();
+    const dialog = this.dialog.open(EditarRegionComponent, {data: {id:id, nombre:nombre}})
   }
 }
