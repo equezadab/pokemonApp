@@ -38,5 +38,9 @@ export class ListarRegionesComponent implements OnInit {
 
   editarRegion(id:string, nombre:string){
     const dialog = this.dialog.open(EditarRegionComponent, {data: {id:id, nombre:nombre}})
+    dialog.afterClosed().subscribe(result => {
+      location.reload()
+    }
+    )
   }
 }

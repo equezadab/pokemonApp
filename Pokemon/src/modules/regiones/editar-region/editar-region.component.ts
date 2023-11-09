@@ -21,7 +21,9 @@ export class EditarRegionComponent {
     }
     this.regionesServices.put(region)
     .subscribe(response=>{
-      console.log(response)
+      console.log(response) 
+      this.dialogRef.close()
     })
+    
   }
 }

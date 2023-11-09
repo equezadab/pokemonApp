@@ -29,6 +29,7 @@ export class RegionesService {
   public put(region:IRegiones){
     const endpoint:string = 'https://2jx7odrg4f.execute-api.us-east-1.amazonaws.com/dev/put'
     const body = JSON.stringify(region)
+    console.log(body)
     return this.http.put(endpoint,body)
   }
 
