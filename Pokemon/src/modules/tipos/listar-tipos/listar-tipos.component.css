@@ -1,0 +1,14 @@
+:host {
+    display: block; /* Establece el contexto de bloque del componente */
+    padding: 10%;
+  }
+
+  h1{
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  table {
+      width: 50%;
+      font-size: 70px  ;
+    }
