@@ -1,0 +1,10 @@
+<mat-form-field>
+    <mat-label>Id Region</mat-label>
+    <input matInput [(ngModel)]="data.id" #id_region readonly>
+</mat-form-field>
+<mat-form-field>
+    <mat-label>Ingrese el nombre</mat-label>
+    <input matInput [(ngModel)]="data.nombre" #nombre_region>
+  </mat-form-field>
+  <button mat-raised-button type="submit" (click)="actualizarRegion(id_region.value,nombre_region.value)">Enviar</button>
+  
