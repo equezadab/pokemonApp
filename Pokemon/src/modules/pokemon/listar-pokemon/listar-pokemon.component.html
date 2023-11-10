@@ -1,1 +1,42 @@
-<p>listar-pokemon works!</p>
+<h1>Lista de Pokemones</h1>
+
+<div>
+  <table mat-table [dataSource]="pokemones" class="mat-elevation-z8">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef><strong>ID</strong></th>
+      <td mat-cell *matCellDef="let element" #id> {{element.id}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef><strong>Nombre Tipos</strong></th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="tipos">
+        <th mat-header-cell *matHeaderCellDef><strong>Nombre Tipos Pokemones</strong></th>
+        <td mat-cell *matCellDef="let element">   
+            <ng-container *ngFor="let tipo of element.tipos"> {{tipo.tipo}}</ng-container>
+        </td>
+      </ng-container>
+
+    <ng-container matColumnDef="regiones">
+    <th mat-header-cell *matHeaderCellDef><strong>Nombre Region Pokemones</strong></th>
+    <td mat-cell *matCellDef="let element">
+        <ng-container *ngFor="let region of element.regiones"> {{region.region}}</ng-container></td>
+    </ng-container>
+
+    <ng-container matColumnDef="botones">
+        <th mat-header-cell *matHeaderCellDef><strong>Eliminar</strong></th>
+        <td mat-cell *matCellDef="let element"><button class="boton" mat-raised-button type="submit" >Eliminar</button></td>
+      </ng-container>
+
+    <ng-container matColumnDef="botonPut">
+        <th mat-header-cell *matHeaderCellDef><strong>Editar</strong></th>
+        <td mat-cell *matCellDef="let element"><button class="boton" mat-raised-button type="submit" >Editar</button></td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

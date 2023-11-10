@@ -10,7 +10,7 @@ import { PokemonesService } from 'src/services/pokemones.service';
 export class ListarPokemonComponent implements OnInit {
 
   pokemones:Ipokemon[]=[];
-  displayedColumns: string[] = ["id","name","regiones","tipos"]
+  displayedColumns: string[] = ["id","name","tipos","regiones","botones","botonPut"]
 
   constructor(private pokemonesServices: PokemonesService){}
 
@@ -29,3 +29,4 @@ export class ListarPokemonComponent implements OnInit {
     }
     
   }
+

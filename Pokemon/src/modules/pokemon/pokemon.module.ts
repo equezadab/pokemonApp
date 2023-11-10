@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { PokemonRoutingModule } from './pokemon-routing.module';
 import { RegistrarPokemonComponent } from './registrar-pokemon/registrar-pokemon.component';
 import { ListarPokemonComponent } from './listar-pokemon/listar-pokemon.component';
+import {MatInputModule} from "@angular/material/input";
+import {MatTableModule} from '@angular/material/table';
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -13,7 +16,10 @@ import { ListarPokemonComponent } from './listar-pokemon/listar-pokemon.componen
   ],
   imports: [
     CommonModule,
-    PokemonRoutingModule
+    PokemonRoutingModule,
+    MatInputModule,
+    MatTableModule,
+    MatButtonModule
   ]
 })
 export class PokemonModule { }
