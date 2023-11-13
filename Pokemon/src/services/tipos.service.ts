@@ -24,7 +24,7 @@ export class TiposService {
     const endpoint:string = 'https://nbugtvmuzf.execute-api.us-east-1.amazonaws.com/dev/delete'
     return this.http.delete(endpoint+'/'+id)
   }
-  
+
   public put(tipos:Itipos){
     const endpoint:string = 'https://lv48uvjbqc.execute-api.us-east-1.amazonaws.com/dev/put'
     const body = JSON.stringify(tipos)

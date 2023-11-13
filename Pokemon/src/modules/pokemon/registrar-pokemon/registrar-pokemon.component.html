@@ -1,1 +1,9 @@
-<p>registrar-pokemon works!</p>
+<mat-form-field>
+  <mat-label>Favorite food</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let region of lista_regiones" [value]="region.id">
+      {{ region["id"] }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+{{lista_regiones|json}}

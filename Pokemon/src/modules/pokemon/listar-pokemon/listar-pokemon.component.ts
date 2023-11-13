@@ -15,18 +15,16 @@ export class ListarPokemonComponent implements OnInit {
   constructor(private pokemonesServices: PokemonesService){}
 
   obtenerPokemones(){
+    let pokemones:Ipokemon[] = []
     this.pokemonesServices.getAll()
-    .subscribe(response=>{
-      response.forEach(pokemon=>{
-        this.pokemones = response
-        console.log(pokemon)  
+      .subscribe(response => {
+
       })
-  })
   }
 
   ngOnInit() {
     this.obtenerPokemones();
     }
-    
+
   }
 
